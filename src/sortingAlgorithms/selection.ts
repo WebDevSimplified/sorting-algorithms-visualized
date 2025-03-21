@@ -1,17 +1,15 @@
 export function selectionSort(array: number[]) {
-  const n = array.length
-
-  for (let i = 0; i < n - 1; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     let minIndex = i
 
-    for (let j = i + 1; j < n; j++) {
+    for (let j = i + 1; j < array.length; j++) {
       if (array[j] < array[minIndex]) {
         minIndex = j
       }
     }
 
-    // Swap the found minimum element with the first element
     if (minIndex !== i) {
+      // Swap elements
       ;[array[i], array[minIndex]] = [array[minIndex], array[i]]
     }
   }
